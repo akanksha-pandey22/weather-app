@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-image: url(https://static.vecteezy.com/system/resources/previews/000/548/114/non_2x/seamless-pattern-with-clouds-and-sun-on-a-white-background-vector-repeating-texture.jpg);
 }
 
 .main {
@@ -202,6 +202,6 @@ img {
   color: #127681;
 }
 small {
-  color: #ffff;
+  color: black;
   text-align: center;
 }
