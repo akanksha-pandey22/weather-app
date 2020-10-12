@@ -1,11 +1,16 @@
 body {
-  background-image: url(https://static.vecteezy.com/system/resources/previews/000/548/114/non_2x/seamless-pattern-with-clouds-and-sun-on-a-white-background-vector-repeating-texture.jpg);
+  background-image: url(https://image.freepik.com/free-vector/kawaii-pastel-cuts-rain-clouds-cartoon-with-funny-faces-seamless-pattern-white-background_71374-28.jpg);
 }
 
 .main {
   font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
-
-  background-image: url(https://images.pexels.com/photos/2310713/pexels-photo-2310713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-image: linear-gradient(
+    to top,
+    #bdc2e8 0%,
+    #bdc2e8 1%,
+    #e6dee9 100%
+  );
+  /*background-image: url(https://images.pexels.com/photos/2310713/pexels-photo-2310713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);*/
 
   border-radius: 10px;
   padding: 35px;
@@ -203,5 +208,8 @@ img {
 }
 small {
   color: black;
-  text-align: center;
+}
+
+#link {
+  color: 07689f;
 }
