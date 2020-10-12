@@ -4,10 +4,9 @@ body {
 
 .main {
   font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
-  /*background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);*/
-  /*background-image: url(https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);*/
+
   background-image: url(https://images.pexels.com/photos/2310713/pexels-photo-2310713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-  /* background-image: url(https://images.pexels.com/photos/3766106/pexels-photo-3766106.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);*/
+
   border-radius: 10px;
   padding: 35px;
   width: 70%;
@@ -203,10 +202,5 @@ img {
 }
 small {
   color: #ffff;
-}
-
-#current-location-icon {
-  position: relative;
-  width: 20px;
-  height: 20px;
+  text-align: center;
 }
