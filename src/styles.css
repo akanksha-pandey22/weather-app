@@ -43,7 +43,8 @@ h2 {
   padding-bottom: 40px;
   font-size: 30px;
   /*color: #7d0633;*/
-  color: #230444;
+  color: #150485;
+  text-align: center;
 }
 
 #current-date,
@@ -195,15 +196,15 @@ img {
   transition: all 200ms ease;
   border: 1px solid #1a64d6;
   background-color: white;
-  color: #ffff;
+  color: #212121;
   border: 2px solid #1b1b2f;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.08);
-  background: #127681;
+  background: #c3aed6;
 }
 
 #current-location:hover {
   background: #fff0f0;
-  color: #127681;
+  color: #150485;
 }
 small {
   color: black;

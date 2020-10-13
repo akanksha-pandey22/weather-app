@@ -1,9 +1,9 @@
 //Feature1
 let currentTime = new Date();
 
-let currentHour = currentTime.getHours();
-let ampm = currentHour >= 12 ? "PM" : "AM";
-if (currentHour < 10) {
+//let currentHour = currentTime.getHours();
+//let ampm = currentHour >= 12 ? "PM" : "AM";
+/*if (currentHour < 10) {
   currentHour = `0${currentHour}`;
 }
 
@@ -11,7 +11,7 @@ let currentMins = currentTime.getMinutes();
 if (currentMins < 10) {
   currentMins = `0${currentMins}`;
 }
-
+*/
 let days = [
   "Sunday",
   "Monday",
@@ -48,8 +48,8 @@ if (date < 10) {
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `${day}, ${date} ${month} ${year}`;
 
-let time = document.querySelector("#current-time");
-time.innerHTML = `${currentHour}:${currentMins} ${ampm}`;
+//let time = document.querySelector("#current-time");
+//time.innerHTML = `${currentHour}:${currentMins} ${ampm}`;
 
 //Feature2
 
