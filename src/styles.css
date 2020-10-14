@@ -4,7 +4,7 @@ body {
 
 h1 {
   display: block;
-  color: #878787;
+  color: #070d59;
   font-weight: 100;
   font-size: 24px;
   margin-bottom: 0;
@@ -17,12 +17,13 @@ ul {
 
 li {
   list-style: none;
-  color: #878787;
+  color: #b83b5e;
   margin: 0;
   padding: 0;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
+  text-transform: capitalize;
 }
 .weather-app-wrapper {
   max-width: 600px;
@@ -56,4 +57,14 @@ li {
   position: relative;
   font-size: 16px;
   top: -34px;
+}
+
+.weather-app {
+  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
+    radial-gradient(
+      91% 146%,
+      rgba(255, 255, 255, 0.5) 47%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  background-blend-mode: screen;
 }
