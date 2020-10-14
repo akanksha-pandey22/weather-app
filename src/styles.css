@@ -4,7 +4,7 @@ body {
 
 h1 {
   display: block;
-  color: #070d59;
+  color: #192965;
   font-weight: 100;
   font-size: 24px;
   margin-bottom: 0;
@@ -65,4 +65,22 @@ li::first-letter {
 .weather-app {
   background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
   background-blend-mode: screen;
+}
+
+#current-location {
+  border-radius: 10px;
+  transition: all 200ms ease;
+  border: 1px solid #1a64d6;
+  background-color: white;
+  color: #192965;
+  border: 2px solid #1b1b2f;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.08);
+  background: #f6eec7;
+  font-family: "Gayathri", sans-serif;
+  padding-top: 5px;
+}
+
+#current-location:hover {
+  background: #f4f6ff;
+  color: #150485;
 }

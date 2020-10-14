@@ -1,3 +1,4 @@
+
 function formatDate(timestamp){
   let date=new Date(timestamp);
   let hours=date.getHours();
@@ -36,8 +37,28 @@ function displayTemperature(response){
   console.log(response.data);
 }
 
+
+
+
+function showPosition(position) {
+  let lon = position.coords.longitude;
+  let lat = position.coords.latitude;
+  let unit = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}&units=${unit}`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function getLocation() {
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+let currentLocationButton = document.querySelector("#current-location");
+currentLocationButton.addEventListener("click", getLocation);
+
 let city="New Delhi";
-let apikey="fef38b882b534b153098ddc0f2902952";
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
+let apiKey="fef38b882b534b153098ddc0f2902952";
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
+
