@@ -1,156 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Application</title>
-    <link rel="stylesheet" href="src/styles.css" />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="src/styles.css" />
+
     <script
       src="https://kit.fontawesome.com/946809f2ef.js"
       crossorigin="anonymous"
     ></script>
   </head>
-  <body >
-      
+  <body>
     <div class="container">
-      <div class="main">
-        <div class="input-group" id="form">
-         <input type="search" class="form-control" placeholder="Enter City"  id= "enter-city" onfocus="this.value=''"/>
-          <div class="input-group-append">
-           <form> <button class="btn btn-secondary" type="submit"></form>
-              <i class="fa fa-search"> </i>
-            </button>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="overview">
+            <h1>
+              New Delhi
+            </h1>
+            <ul>
+              <li>
+                Friday 05:00
+              </li>
+              <li>
+                Clear
+              </li>
+            </ul>
           </div>
-          
-        </div>
-     
-        <div class= "row">
-        <div class="col-sm-12">
-        <h2 id="city">THE HAGUE    
-        </h2>
-        </div>
-      
-      
-      </div>
-
-        <div class="current-weather">
           <div class="row">
-            <div class="col-12">
-              <p id="current-date">Friday, 28 September 2020</p>
-              <div class="col-sm-3">
-                <button id ="current-location">Current Location<i class="fas fa-map-marker-alt"></i></button>
-              </div> 
-            </div>
-          </div>
-          <div class="weather-icons">
-            <div id="current-weather-icon">
-              <img src="images/sunny-icon-512x512-png-weather-png-sunny-480_480.png">
-              
-              <div class="current-state-of-weather">
-                <p id="current-state-of-weather-sunny">Sunny</p>
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/fog.png"
+                  alt="clear"
+                  id="weather-icon"
+                  class="float-left"
+                />
+                <div class="float-left">
+                  <strong> 12</strong
+                  ><span class="units">°C | <a href="#">°F</a></span>
+                </div>
               </div>
             </div>
 
-          <div class="todays-temperature">
-            
-            <div class="row">
-              <div class="col-sm-4">
-                <h5 id="currentTemp">TODAY is 21° C </h2>
-                
-              </div>
-            
-              <div class="col-sm-4">
-                <p id="current-humidity">Humidity</p></div>
-              <div class="col-sm-4">
-                <p id="current-wind">Wind</p></div>
-            
-            
-   
+            <div class="col-6">
+              <ul>
+                <li>Precipitation: 0%</li>
+                <li>Humidity: 73%</li>
+                <li>Wind: 2km/hr</li>
+              </ul>
             </div>
-           
-        <div class="row">
-            <div class="col-sm-4">
-             <p id="current-humidity-percentage">68%</p></div>
-             <div class="col-sm-4">
-               <p id="current-wind-speed">11mph</p></div>
+          </div>
+        </div>
+        <small>
+          <a
+            href="https://github.com/akanksha-pandey22/weather-app"
+            target="_blank"
+            >Open-source code
+          </a>
+          by Akanksha Pandey
+        </small>
       </div>
-          </div>
-      <hr class="divider" />
-
-      <div class="future">
-       
-        <div class="future-days">
-          <div class="row">
-            <div class="col-sm">Saturday</div>
-            <div class="col-sm">Sunday</div>
-            <div class="col-sm">Monday</div>
-            <div class="col-sm">Tuesday</div>
-            <div class="col-sm">Wednesday</div>
-          </div>
-        </div>
-
-        <div class="weather-icons-bottom">
-          <div class="future-weather-icons">
-            <div class="row">
-              <div class="col-sm">
-                <i class="fas fa-cloud-rain"></i>
-              </div>
-              <div class="col-sm">
-                <i class="fas fa-cloud-sun"></i>
-              </div>
-              <div class="col-sm">
-                <i class="fas fa-sun"></i>
-              </div>
-              <div class="col-sm">
-                <i class="fas fa-cloud"></i>
-              </div>
-              <div class="col-sm">
-                <i class="fas fa-cloud-showers-heavy"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="future-temperature">
-          <div class="row">
-            <div class="col-sm">16 °C</div>
-            <div class="col-sm">20 °C</div>
-            <div class="col-sm">35 °C</div>
-            <div class="col-sm">20 °C</div>
-            <div class="col-sm">10 °C</div>
-          </div>
-        </div>
-       
-      </div>
-      
     </div>
+
     <script src="src/index.js"></script>
-  
-    </div>
-    </div>
-    <small>
-        <a href="https://github.com/akanksha-pandey22/weather-app" target="_blank" id="link">Open-source code</a>
-        , by Akanksha Pandey
-    </small>
-    </div>
   </body>
 </html>
