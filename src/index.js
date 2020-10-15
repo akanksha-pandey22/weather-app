@@ -36,9 +36,10 @@ function displayTemperature(response){
   iconElement.setAttribute("alt",response.data.weather[0].description);
   console.log(response.data);
 }
+let apiKey="fef38b882b534b153098ddc0f2902952";
 
 function search(city){
-  let apiKey="fef38b882b534b153098ddc0f2902952";
+ 
   let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
