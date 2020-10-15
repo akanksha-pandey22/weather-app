@@ -37,8 +37,22 @@ function displayTemperature(response){
   console.log(response.data);
 }
 
+function search(city){
+  let apiKey="fef38b882b534b153098ddc0f2902952";
+  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
 
+
+function handleSubmit(event){
+  event.preventDefault();
+  let cityInputElement=document.querySelector("#city-input");
+  search(cityInputElement.value);
+  
+}
+
+search("New Delhi");
 
 function showPosition(position) {
   let lon = position.coords.longitude;
@@ -56,9 +70,13 @@ function getLocation() {
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getLocation);
 
-let city="New Delhi";
-let apiKey="fef38b882b534b153098ddc0f2902952";
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+
+
+
+
+
+
+let form= document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 
