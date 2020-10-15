@@ -104,7 +104,7 @@ function displayCelsiusTemperature(event){
 
 }
 
-search("Mumbai");
+search("New Delhi");
 
 function showPosition(position) {
   let lon = position.coords.longitude;
