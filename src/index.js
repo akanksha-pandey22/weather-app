@@ -39,7 +39,6 @@ function displayTemperature(response){
   iconElement.setAttribute("alt",response.data.weather[0].description);
   console.log(response.data);
 
- 
 }
 
 let apiKey="fef38b882b534b153098ddc0f2902952";
@@ -49,7 +48,6 @@ function displayForecast(response){
   let forecastElement = document.querySelector("#forecast-weather");
   forecastElement.innerHTML=null;
   let forecast=null;
-
   for (let index = 0; index < 6; index++) {
   forecast=response.data.list[index];
   forecastElement.innerHTML+= `<div class="col2 mt-5">
@@ -69,7 +67,6 @@ function displayForecast(response){
 
 }
 
-
 function search(city){
   let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
@@ -78,7 +75,6 @@ function search(city){
   axios(apiUrl).then(displayForecast);
 
 }
-
 
 function handleSubmit(event){
   event.preventDefault();
@@ -108,10 +104,6 @@ function displayCelsiusTemperature(event){
 }
 
 search("New Delhi");
-
-
-
-
 
 let celsiusTemperature = null;
 
